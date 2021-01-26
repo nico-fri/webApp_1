@@ -1,0 +1,87 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+.login__left {
+  width: 50%;
+}
+
+.login__right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 300px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__form > .btn {
+  margin: 10px 0;
+}
+
+.login__recover {
+  align-self: flex-end;
+  margin: 10px 0;
+}
+
+.login__seperator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.login__seperator > span {
+  border-top: 1px solid var(--grey);
+  flex: 1;
+  margin: 0 15px;
+}
+
+.login__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.login__card {
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.login__card:hover {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 50px -20px var(--sec-color);
+  box-shadow: 0px 0px 50px -20px var(--sec-color);
+}
+
+.login__icon {
+  font-size: 3em;
+}
+
+.login--iconColor {
+  color: var(--pri-color);
+}
+
+.login__signup {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .login__left {
+    width: 100%;
+  }
+  .login__right {
+    width: 100%;
+  }
+}

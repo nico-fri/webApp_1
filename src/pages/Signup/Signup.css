@@ -1,0 +1,42 @@
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  height: 100%;
+}
+
+.signup__left {
+  width: 50%;
+}
+
+.signup__right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 300px;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup__form > .btn {
+  margin: 25px 0;
+}
+
+.signup__login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .signup__left {
+    width: 100%;
+  }
+  .signup__right {
+    width: 100%;
+  }
+}
