@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '../../assets/Login/hero2.svg'
 import './Information.css'
 
 function Information({ title }) {

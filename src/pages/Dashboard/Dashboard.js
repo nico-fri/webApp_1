@@ -2,12 +2,10 @@ import React, { useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import './Dashboard.css'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import Information from '../../components/Information/Information'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   useHistory,
 } from 'react-router-dom'
 import Home from '../../components/Home/Home'
@@ -44,6 +42,11 @@ export default function Dashboard() {
           </Route>
         </Switch>
         <div>
+          {error && (
+            <div className='msg msg--danger'>
+              <p>{error}</p>
+            </div>
+          )}
           <button variant='link' onClick={handleLogout}>
             Log Out
           </button>
