@@ -36,7 +36,7 @@ export default function Dashboard() {
           <Sidebar />
         </div>
         <Switch>
-          <Route path='/app'>
+          <Route exact path='/'>
             <Home name={currentUser.email} />
           </Route>
           <Route path='/settings'>

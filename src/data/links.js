@@ -1,7 +1,7 @@
 const links = [
   {
     title: 'Home',
-    link: '/app',
+    link: '/',
     icon: '',
   },
   {

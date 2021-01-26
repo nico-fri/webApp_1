@@ -10,7 +10,7 @@ function ErrorPath() {
         <div>
           <h1>Woops...</h1>
           <p>This page is not available.</p>
-          <Link to='/app'>Back to home</Link>
+          <Link to='/'>Back to home</Link>
         </div>
       </div>
       <div className='errorpath__right'>
