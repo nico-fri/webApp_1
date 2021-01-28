@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import './UpdateProfile.css'
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -46,38 +47,33 @@ export default function UpdateProfile() {
         <div>
           <h2>Update Profile</h2>
           {error && <div variant='danger'>{error}</div>}
-          <form onSubmit={handleSubmit}>
-            <fieldset id='email'>
-              <input
-                placeholder='Email'
-                type='email'
-                ref={emailRef}
-                required
-                defaultValue={currentUser.email}
-              ></input>
-            </fieldset>
-            <fieldset id='password'>
-              <input
-                type='password'
-                ref={passwordRef}
-                placeholder='Password'
-              ></input>
-            </fieldset>
-            <fieldset id='password-confirm'>
-              <input
-                type='password'
-                ref={passwordConfirmRef}
-                placeholder='Password Confirmation'
-              ></input>
-            </fieldset>
-            <button disabled={loading} type='submit'>
+          <form className='update__form' onSubmit={handleSubmit}>
+            <input
+              placeholder='Email'
+              type='email'
+              ref={emailRef}
+              required
+              defaultValue={currentUser.email}
+            ></input>
+            <input
+              type='password'
+              ref={passwordRef}
+              placeholder='Password'
+            ></input>
+            <input
+              type='password'
+              ref={passwordConfirmRef}
+              placeholder='Password Confirmation'
+            ></input>
+            <button
+              className='btn btn--primary btn--large update__btn'
+              disabled={loading}
+              type='submit'
+            >
               Update
             </button>
           </form>
         </div>
-      </div>
-      <div>
-        <Link to='/'>Cancel</Link>
       </div>
     </>
   )

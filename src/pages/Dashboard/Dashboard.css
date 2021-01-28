@@ -7,3 +7,14 @@
 .dashboard__sidebar {
   width: 250px;
 }
+
+@media screen and (max-width: 992px) {
+  .dashboard__sidebar {
+    display: none;
+  }
+}
+
+.dashboard__container {
+  margin: 20px;
+  flex: 1;
+}

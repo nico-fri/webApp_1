@@ -13,19 +13,24 @@
 .sidebar__links {
   flex: 1;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar__item {
+  padding: 20px;
 }
 
 .sidebar__link {
-  padding: 20px 0 20px 70px;
-}
-
-.sidebar__link > a {
-  color: var(--grey);
-  font-weight: 400;
+  color: var(--grey) !important;
+  font-weight: 400 !important;
 }
 
 .active {
-  border-left: 4px solid var(--pri-color);
-  color: var(--pri-color);
-  background: linear-gradient(120deg, rgba(68, 96, 241, 0.2), rgba(0, 0, 0, 0));
+  color: var(--pri-color) !important;
+}
+
+.sidebar__btn {
+  margin-bottom: 10px;
 }

@@ -1,31 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import './Dashboard.css'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useHistory,
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from '../../components/Home/Home'
 import UpdateProfile from '../../components/UpdateProfile/UpdateProfile'
+import NoContent from '../../components/NoContent/NoContent'
 
 export default function Dashboard() {
-  const [error, setError] = useState('')
-  const { currentUser, logout } = useAuth()
-  const history = useHistory()
-
-  async function handleLogout() {
-    setError('')
-
-    try {
-      await logout()
-      history.push('/login')
-    } catch {
-      setError('Failed to log out')
-    }
-  }
+  const { currentUser } = useAuth()
 
   return (
     <Router>
@@ -34,23 +17,16 @@ export default function Dashboard() {
           <Sidebar />
         </div>
         <Switch>
-          <Route exact path='/'>
-            <Home name={currentUser.email} />
-          </Route>
-          <Route path='/settings'>
-            <UpdateProfile />
-          </Route>
+          <div className='dashboard__container'>
+            <Route exact path='/'>
+              <Home name={currentUser.email} />
+              <NoContent />
+            </Route>
+            <Route path='/settings'>
+              <UpdateProfile />
+            </Route>
+          </div>
         </Switch>
-        <div>
-          {error && (
-            <div className='msg msg--danger'>
-              <p>{error}</p>
-            </div>
-          )}
-          <button variant='link' onClick={handleLogout}>
-            Log Out
-          </button>
-        </div>
       </div>
     </Router>
   )
