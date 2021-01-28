@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 
 function Sidebar() {
-  const { currentUser, logout } = useAuth()
+  const { logout } = useAuth()
   const [error, setError] = useState('')
   const history = useHistory()
 
