@@ -1,5 +1,5 @@
 .noContent {
-  height: 100%;
+  margin: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,4 +16,10 @@
 
 .noContent__img {
   width: 40%;
+}
+
+@media (max-width: 768px) {
+  .noContent__img {
+    width: 80%;
+  }
 }

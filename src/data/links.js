@@ -2,12 +2,12 @@ const links = [
   {
     title: 'Home',
     link: '/',
-    icon: '',
+    icon: 'home',
   },
   {
     title: 'Settings',
     link: '/settings',
-    icon: '',
+    icon: 'settings',
   },
 ]
 

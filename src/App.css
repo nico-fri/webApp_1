@@ -154,6 +154,7 @@ input {
   padding: 16px;
   border: none;
   border-radius: 15px;
+  transition: 0.3s all ease;
 }
 
 .btn--primary {
@@ -162,6 +163,21 @@ input {
   box-shadow: 0px 0px 50px 0px #8e9ff0;
   -moz-box-shadow: 0px 0px 50px 0px #8e9ff0;
   -webkit-box-shadow: 0px 0px 50px 0px #8e9ff0;
+}
+
+.btn--primary:hover {
+  box-shadow: 0px 0px 30px 0px #8e9ff0;
+  -moz-box-shadow: 0px 0px 30px 0px #8e9ff0;
+  -webkit-box-shadow: 0px 0px 30px 0px #8e9ff0;
+}
+
+.btn--secondary {
+  background: none;
+  color: var(--dark);
+}
+
+.btn--secondary:hover {
+  color: var(--pri-color);
 }
 
 .btn--large {
