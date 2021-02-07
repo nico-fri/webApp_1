@@ -5,8 +5,13 @@
   padding-right: 50px;
 }
 
-.information > h1 {
+.information__heading {
   margin-bottom: 20px;
+}
+
+.information__logo {
+  height: 25px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {

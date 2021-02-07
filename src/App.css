@@ -3,9 +3,10 @@
 */
 
 :root {
-  --pri-color: #4460f1;
+  --pri-color: #5b1ddd;
   --sec-color: #161618;
   --grey: #a2acb9;
+  --light-grey: #e6e9fc;
   --light: #fff;
   --bg-color: #f5f5f5;
 }
@@ -160,15 +161,11 @@ input {
 .btn--primary {
   background: var(--pri-color);
   color: var(--light);
-  box-shadow: 0px 0px 50px 0px #8e9ff0;
-  -moz-box-shadow: 0px 0px 50px 0px #8e9ff0;
-  -webkit-box-shadow: 0px 0px 50px 0px #8e9ff0;
+  box-shadow: 0px 0px 30px 0px rgba(91, 29, 221, 0.5);
 }
 
 .btn--primary:hover {
-  box-shadow: 0px 0px 30px 0px #8e9ff0;
-  -moz-box-shadow: 0px 0px 30px 0px #8e9ff0;
-  -webkit-box-shadow: 0px 0px 30px 0px #8e9ff0;
+  box-shadow: 0px 0px 30px 0px rgba(91, 29, 221, 0.2);
 }
 
 .btn--secondary {

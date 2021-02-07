@@ -25,6 +25,10 @@
   width: 80%;
 }
 
+.errorpath__text {
+  padding-bottom: 10px;
+}
+
 @media (max-width: 992px) {
   .errorpath__left {
     width: 100%;

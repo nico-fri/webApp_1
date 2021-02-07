@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import { MdSettings, MdDashboard, MdPayment } from 'react-icons/md'
 import { IconContext } from 'react-icons/lib'
+import Logo from '../../assets/Logo.png'
 
 function Sidebar({ setMenuOpen }) {
   const { logout } = useAuth()
@@ -26,10 +27,7 @@ function Sidebar({ setMenuOpen }) {
   return (
     <aside className='sidebar'>
       <div className='sidebar__header'>
-        <IconContext.Provider value={{ className: 'sidebar__logoIcon' }}>
-          <MdPayment />
-        </IconContext.Provider>
-        <h3>PAY</h3>
+        <img className='sidebar__logo' src={Logo} alt='' />
       </div>
 
       <ul className='sidebar__links'>
@@ -43,6 +41,7 @@ function Sidebar({ setMenuOpen }) {
             >
               <IconContext.Provider value={{ className: 'sidebar__icons' }}>
                 {item.icon === 'home' && <MdDashboard />}
+                {item.icon === 'cards' && <MdPayment />}
                 {item.icon === 'settings' && <MdSettings />}
               </IconContext.Provider>
               {item.title}

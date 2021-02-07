@@ -5,11 +5,11 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from '../../components/Home/Home'
 import UpdateProfile from '../../components/UpdateProfile/UpdateProfile'
-import NoContent from '../../components/NoContent/NoContent'
 import Navbar from '../../components/Navbar/Navbar'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IconContext } from 'react-icons/lib'
 import { MdClose } from 'react-icons/md'
+import Cards from '../../components/Cards/Cards'
 
 export default function Dashboard() {
   const { currentUser } = useAuth()
@@ -24,15 +24,16 @@ export default function Dashboard() {
             <div className='dashboard__header'>
               <div onClick={() => setMenuOpen(!menuOpen)}>
                 <IconContext.Provider value={{ className: 'dashboard__icon' }}>
-                  {!menuOpen && <HiMenuAlt4 />}
-                  {menuOpen && <MdClose />}
+                  {menuOpen ? <MdClose /> : <HiMenuAlt4 />}
                 </IconContext.Provider>
               </div>
               <Navbar />
             </div>
             <Route exact path='/'>
               <Home name={currentUser.email} />
-              <NoContent />
+            </Route>
+            <Route path='/cards'>
+              <Cards />
             </Route>
             <Route path='/settings'>
               <UpdateProfile />

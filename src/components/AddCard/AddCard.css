@@ -1,0 +1,18 @@
+.addCard {
+  min-width: 300px;
+}
+
+.addCard > h3 {
+  margin-bottom: 20px;
+}
+
+.addCard__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.addCard__actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

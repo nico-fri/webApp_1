@@ -45,7 +45,7 @@ export default function UpdateProfile() {
     <>
       <div>
         <div>
-          <h2>Update Profile</h2>
+          <h2 className='update__heading'>Update Profile</h2>
           {error && <div variant='danger'>{error}</div>}
           <form className='update__form' onSubmit={handleSubmit}>
             <input

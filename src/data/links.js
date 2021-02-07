@@ -5,6 +5,11 @@ const links = [
     icon: 'home',
   },
   {
+    title: 'Cards',
+    link: '/cards',
+    icon: 'cards',
+  },
+  {
     title: 'Settings',
     link: '/settings',
     icon: 'settings',

@@ -1,0 +1,30 @@
+.home__heading {
+  margin: 5px 0 40px 0;
+}
+
+.home__empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home__emptyBtn {
+  margin: 20px 0;
+}
+
+.home__emptyImg {
+  width: 30%;
+}
+
+@media (max-width: 768px) {
+  .home__emptyImg {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .home__emptyImg {
+    width: 50%;
+  }
+}

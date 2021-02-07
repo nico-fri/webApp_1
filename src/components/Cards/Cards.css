@@ -1,0 +1,29 @@
+.cards__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 40px 0;
+}
+
+.cards__addIcon {
+  font-size: 2em;
+}
+
+.cards__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards__list {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.cards__listHeader > th {
+  padding: 20px 0;
+}
+
+.cards__listRow {
+  background: var(--light);
+}
