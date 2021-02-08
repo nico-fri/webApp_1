@@ -1,4 +1,4 @@
-export default (state, action) => {
+export const AppReducer = (state, action) => {
   switch (action.type) {
     case 'REMOVE_CARD':
       return {
@@ -6,7 +6,6 @@ export default (state, action) => {
         cards: state.cards.filter((card) => card.id !== action.payload),
       }
     case 'ADD_CARD':
-      console.log(action.payload)
       return {
         ...state,
         cards: [...state.cards, action.payload],

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react'
-import AppReducer from '../reducers/AppReducer'
+import { AppReducer } from '../reducers/AppReducer'
 
 const initialState = {
   cards: [

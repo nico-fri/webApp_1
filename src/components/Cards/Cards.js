@@ -44,7 +44,8 @@ function Cards() {
       <table className='cards__list'>
         <thead>
           <tr className='cards__listHeader'>
-            <th>Name</th> <th>Number</th>
+            <th>Name</th>
+            <th>Number</th>
             <th></th>
           </tr>
         </thead>

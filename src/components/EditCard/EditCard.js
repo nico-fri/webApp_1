@@ -6,7 +6,6 @@ function EditCard({ closeModal, id }) {
   const { cards, editCard } = useContext(CardContext)
   const [name, setName] = useState('')
   const [number, setNumber] = useState('')
-  const [currentCard, setCurrentCard] = useState('')
 
   const handleEdit = (e) => {
     e.preventDefault()
@@ -20,14 +19,10 @@ function EditCard({ closeModal, id }) {
   }
 
   useEffect(() => {
-    cards.map((item) => {
-      if (item.id === id) {
-        setCurrentCard(item)
-        setName(item.name)
-        setNumber(item.number)
-      }
-    })
-  }, [])
+    const currentCard = cards.find((card) => card.id === id)
+    setName(currentCard.name)
+    setNumber(currentCard.number)
+  }, [cards, id])
 
   return (
     <div className='editCard'>

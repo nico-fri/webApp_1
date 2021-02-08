@@ -18,6 +18,7 @@
   width: 100%;
   text-align: center;
   border-collapse: collapse;
+  min-width: 400px;
 }
 
 .cards__listHeader > th {
