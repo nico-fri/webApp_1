@@ -7,7 +7,8 @@
 }
 
 .dashboard__sidebar {
-  height: 100%;
+  position: sticky;
+  top: 0;
 }
 
 .dashboard__container {
@@ -16,14 +17,22 @@
 }
 
 .dashboard__icon {
-  height: 15px;
-  width: 15px;
-  margin-top: 4px;
-  margin-right: 10px;
+  height: 20px;
+  width: auto;
 }
 
-.dashboard__icon:hover {
-  color: var(--pri-color);
+.dashboard__iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.dashboard__iconWrapper:hover {
+  background: var(--light);
 }
 
 .dashboard__header {

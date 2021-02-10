@@ -7,6 +7,7 @@ const initialState = {
       id: 0,
       name: 'Max Mustermann',
       number: 113222741193,
+      value: 5000,
     },
   ],
 }

@@ -1,0 +1,37 @@
+.transfer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.transfer__content {
+  display: flex;
+  margin: 20px 0;
+}
+
+.transfer__item {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  background: var(--light);
+  border-radius: 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.transfer__item:hover {
+  transform: translateY(-5px);
+}
+
+.transfer__iconWrapper {
+  padding: 12px;
+  background-color: var(--light-grey);
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.transfer__icon {
+  height: 15px;
+  width: auto;
+}

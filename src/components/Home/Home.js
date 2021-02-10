@@ -1,24 +1,33 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { CardContext } from '../../contexts/CardContext'
 import Card from '../Card/Card'
 import Transactions from '../Transactions/Transactions'
 import './Home.css'
 import Empty from '../../assets/NoContent/empty.svg'
 import { Link } from 'react-router-dom'
+import Transfer from '../Transfer/Transfer'
+import Acitvities from '../Activities/Activities'
 
 function Home({ name }) {
   const { cards } = useContext(CardContext)
+  const [currentCard, setCurrentCard] = useState('')
+
+  useEffect(() => {
+    setCurrentCard(cards[0])
+  }, [cards])
 
   return (
     <div className='home'>
-      <h2 className='home__heading'>Welcome {name}</h2>
-
       {cards.length > 0 ? (
         <>
-          {cards?.map((item) => (
-            <Card key={item.id} item={item} />
-          ))}
-          <Transactions />
+          <div className='home__left'>
+            <Card item={currentCard} />
+            <Transfer />
+            <Acitvities />
+          </div>
+          <div className='home__right'>
+            <Transactions />
+          </div>
         </>
       ) : (
         <div className='home__empty'>

@@ -1,0 +1,41 @@
+.activities {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.activities__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.activities__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0 25px;
+}
+
+.activities__description {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.activities__description > p {
+  color: var(--grey);
+}
+
+.activities__percent {
+  font-weight: 700;
+}
+
+.activities__icon {
+  margin-right: 25px;
+  margin-left: 10px;
+  height: 15px;
+  width: auto;
+}

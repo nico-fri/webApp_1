@@ -1,3 +1,11 @@
-.transactions > h4 {
-  margin: 50px 0 20px 0;
+.transactions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.transactions__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

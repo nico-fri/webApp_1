@@ -32,7 +32,7 @@ function Card({ item }) {
       </div>
       <div className='card__footer'>
         <div className='card__balance'>
-          <p className='card_balanceNumber'>$ 5.000</p>
+          <p className='card_balanceNumber'>$ {item.value}</p>
           <p className='card__heading'>Balance</p>
         </div>
         <div className='card__type'>

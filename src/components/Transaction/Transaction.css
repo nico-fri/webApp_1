@@ -1,0 +1,42 @@
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  min-width: 300px;
+}
+
+.transaction__icon {
+  height: 25px;
+  width: auto;
+}
+
+.transaction__iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 12px;
+  margin-right: 20px;
+}
+
+.transaction__description {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.transaction__description > p {
+  color: var(--grey);
+}
+
+.transaction__date {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.transaction__value {
+  font-weight: 700;
+  font-size: 1.2em;
+}

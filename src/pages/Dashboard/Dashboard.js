@@ -8,7 +8,6 @@ import UpdateProfile from '../../components/UpdateProfile/UpdateProfile'
 import Navbar from '../../components/Navbar/Navbar'
 import { HiMenuAlt4 } from 'react-icons/hi'
 import { IconContext } from 'react-icons/lib'
-import { MdClose } from 'react-icons/md'
 import Cards from '../../components/Cards/Cards'
 
 export default function Dashboard() {
@@ -22,9 +21,12 @@ export default function Dashboard() {
         <Switch>
           <div className='dashboard__container'>
             <div className='dashboard__header'>
-              <div onClick={() => setMenuOpen(!menuOpen)}>
+              <div
+                className='dashboard__iconWrapper'
+                onClick={() => setMenuOpen(!menuOpen)}
+              >
                 <IconContext.Provider value={{ className: 'dashboard__icon' }}>
-                  {menuOpen ? <MdClose /> : <HiMenuAlt4 />}
+                  <HiMenuAlt4 />
                 </IconContext.Provider>
               </div>
               <Navbar />

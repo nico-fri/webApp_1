@@ -1,9 +1,24 @@
-.home__heading {
-  margin: 5px 0 40px 0;
+.home {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.home__right {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.home__left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 35px;
 }
 
 .home__empty {
   display: flex;
+  flex: 1;
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
